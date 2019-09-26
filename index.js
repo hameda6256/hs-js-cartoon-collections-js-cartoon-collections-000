@@ -1,7 +1,8 @@
 var dwarves = ["Doc", "Dopey", "Grmpuy", "Bashfull"];
 var planeteerCalls = ["earth", "wind", "fire", "water", "heart"];
-var words = ["earth", "wind", "fire", "water", "heart"]
-var foods = ["gouda", "chedar", "crackers"]
+var words = ["earth", "wind", "fire", "water", "heart"];
+var foods = ["gouda", "crackers", "cheddar", "Swiss cheese"];
+var bwords = ["airplane", "ball", "boat", "car"];
 
 function dwarfRollCall(dwarves) {
   var newDwarfs = [];
@@ -10,9 +11,10 @@ function dwarfRollCall(dwarves) {
   }
   return newDwarfs.join("");
 }
+
 function summonCaptainPlanet(planeteerCalls){
   var array = [];
-  for (var i=0; i<planeteerCalls.length; i++){
+  for (var i = 0; i<planeteerCalls.length; i++){
     planeteerCalls[i] = planeteerCalls[i].toUpperCase(); 
     array.push(`${planeteerCalls[i]}!`);
   }
@@ -32,14 +34,23 @@ function findTheCheese (foods) {
   for (var i=0; i<foods.length; i++){
     foods.shift();
     if (foods[i] === "gouda"){
-      return `gouda`;
+      return "gouda";
     }
-    else if (foods[i] === `cheddar`){
-      return 'cheddar';
+    else if (foods[i] === "cheddar"){
+      return "cheddar";
     }
     else {
-      return `no cheese!`;
+      return "no cheese!";
       }
   }
 }
 
+function wordsB (bwords){
+  var bArray = [];
+  for (var i = 0; i<bwords.length; i++){
+    if (bwords[i].startsWith("b")){
+       bArray.push(bwords[i]);
+    }
+  }
+  return bArray; 
+}
